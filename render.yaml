@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: telegram-store-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python telegrambot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: "8029340008:AAFcOx4dbBen9UVDUvlc7LDfmW4usjaHCYI"
+      - key: CHANNEL_ID
+        value: "-1003615431877"
